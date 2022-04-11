@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842119FF2804B56300AAD58C /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 842119FE2804B56300AAD58C /* Model */; };
 		84A1C5E52804899B00917E04 /* SIXT_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5E42804899B00917E04 /* SIXT_testApp.swift */; };
 		84A1C5E92804899D00917E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5E82804899D00917E04 /* Assets.xcassets */; };
 		84A1C5EC2804899D00917E04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5EB2804899D00917E04 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842119FC2804B4DC00AAD58C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Model; sourceTree = "<group>"; };
 		84A1C5E12804899B00917E04 /* SIXT_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIXT_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1C5E42804899B00917E04 /* SIXT_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXT_testApp.swift; sourceTree = "<group>"; };
 		84A1C5E82804899D00917E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842119FF2804B56300AAD58C /* Model in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,13 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842119FD2804B56300AAD58C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84A1C5D82804899B00917E04 = {
 			isa = PBXGroup;
 			children = (
 				84A1C5E32804899B00917E04 /* SIXT_test */,
 				84A1C5F42804899E00917E04 /* SIXT_testTests */,
+				84A1C5F52804899E00917E04 /* SIXT_testTests.swift */,
 				84A1C5FE2804899E00917E04 /* SIXT_testUITests */,
+				842119FC2804B4DC00AAD58C /* Model */,
 				84A1C5E22804899B00917E04 /* Products */,
+				842119FD2804B56300AAD58C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,7 +147,6 @@
 		84A1C5F42804899E00917E04 /* SIXT_testTests */ = {
 			isa = PBXGroup;
 			children = (
-				84A1C5F52804899E00917E04 /* SIXT_testTests.swift */,
 			);
 			path = SIXT_testTests;
 			sourceTree = "<group>";
@@ -298,6 +310,9 @@
 			dependencies = (
 			);
 			name = SIXT_test;
+			packageProductDependencies = (
+				842119FE2804B56300AAD58C /* Model */,
+			);
 			productName = SIXT_test;
 			productReference = 84A1C5E12804899B00917E04 /* SIXT_test.app */;
 			productType = "com.apple.product-type.application";
@@ -758,6 +773,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		842119FE2804B56300AAD58C /* Model */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Model;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84A1C5D92804899B00917E04 /* Project object */;
 }

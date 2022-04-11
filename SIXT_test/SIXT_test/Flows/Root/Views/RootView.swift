@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Model
 
 struct RootView: RoutableView {
     var router: RootRouter
@@ -41,7 +42,6 @@ fileprivate extension View {
     func tabItemStyle(route: RootRoute) -> some View {
         let systemImageName: String
         var title: String
-        
         switch route {
         case .list:
             systemImageName = SFSymbols.List.bullet
