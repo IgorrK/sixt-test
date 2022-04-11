@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SIXT_test
+
+  Created by Igor Kulik on 11.04.2022.
+  
+*/
+
+"root.tab.list" = "List";
+"root.tab.map" = "View on Map";

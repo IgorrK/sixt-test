@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		84A1C5E52804899B00917E04 /* SIXT_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5E42804899B00917E04 /* SIXT_testApp.swift */; };
-		84A1C5E72804899B00917E04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5E62804899B00917E04 /* ContentView.swift */; };
 		84A1C5E92804899D00917E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5E82804899D00917E04 /* Assets.xcassets */; };
 		84A1C5EC2804899D00917E04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5EB2804899D00917E04 /* Preview Assets.xcassets */; };
 		84A1C5F62804899E00917E04 /* SIXT_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5F52804899E00917E04 /* SIXT_testTests.swift */; };
 		84A1C6002804899E00917E04 /* SIXT_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5FF2804899E00917E04 /* SIXT_testUITests.swift */; };
 		84A1C6022804899E00917E04 /* SIXT_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C6012804899E00917E04 /* SIXT_testUITestsLaunchTests.swift */; };
+		84A1C61428048D2100917E04 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C61328048D2100917E04 /* RootView.swift */; };
+		84A1C61728048DAB00917E04 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C61628048DAB00917E04 /* Routing.swift */; };
+		84A1C61928048DFB00917E04 /* RoutableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C61828048DFB00917E04 /* RoutableView.swift */; };
+		84A1C61C2804900A00917E04 /* RootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C61B2804900A00917E04 /* RootRoute.swift */; };
+		84A1C6222804909F00917E04 /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C6212804909F00917E04 /* CarListView.swift */; };
+		84A1C624280490B400917E04 /* CarMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C623280490B400917E04 /* CarMapView.swift */; };
+		84A1C6272804982800917E04 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C6262804982800917E04 /* SFSymbols.swift */; };
+		84A1C62C28049E1800917E04 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C62B28049E1800917E04 /* Localizable.swift */; };
+		84A1C63028049E7400917E04 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C62F28049E7400917E04 /* String.swift */; };
+		84A1C63D2804B2BB00917E04 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C63B2804B2BB00917E04 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		84A1C5E12804899B00917E04 /* SIXT_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIXT_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1C5E42804899B00917E04 /* SIXT_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXT_testApp.swift; sourceTree = "<group>"; };
-		84A1C5E62804899B00917E04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84A1C5E82804899D00917E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A1C5EB2804899D00917E04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84A1C5F12804899E00917E04 /* SIXT_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIXT_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,16 @@
 		84A1C5FB2804899E00917E04 /* SIXT_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIXT_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1C5FF2804899E00917E04 /* SIXT_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXT_testUITests.swift; sourceTree = "<group>"; };
 		84A1C6012804899E00917E04 /* SIXT_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXT_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84A1C61328048D2100917E04 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		84A1C61628048DAB00917E04 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		84A1C61828048DFB00917E04 /* RoutableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableView.swift; sourceTree = "<group>"; };
+		84A1C61B2804900A00917E04 /* RootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoute.swift; sourceTree = "<group>"; };
+		84A1C6212804909F00917E04 /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
+		84A1C623280490B400917E04 /* CarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapView.swift; sourceTree = "<group>"; };
+		84A1C6262804982800917E04 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		84A1C62B28049E1800917E04 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		84A1C62F28049E7400917E04 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		84A1C63C2804B2BB00917E04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +112,13 @@
 		84A1C5E32804899B00917E04 /* SIXT_test */ = {
 			isa = PBXGroup;
 			children = (
-				84A1C5E42804899B00917E04 /* SIXT_testApp.swift */,
-				84A1C5E62804899B00917E04 /* ContentView.swift */,
+				84A1C60E28048A7C00917E04 /* Application */,
 				84A1C5E82804899D00917E04 /* Assets.xcassets */,
+				84A1C61528048DA000917E04 /* Base */,
+				84A1C62D28049E6000917E04 /* Extensions */,
+				84A1C60F28048C3900917E04 /* Flows */,
 				84A1C5EA2804899D00917E04 /* Preview Content */,
+				84A1C6252804980E00917E04 /* Resources */,
 			);
 			path = SIXT_test;
 			sourceTree = "<group>";
@@ -125,6 +146,140 @@
 				84A1C6012804899E00917E04 /* SIXT_testUITestsLaunchTests.swift */,
 			);
 			path = SIXT_testUITests;
+			sourceTree = "<group>";
+		};
+		84A1C60E28048A7C00917E04 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C5E42804899B00917E04 /* SIXT_testApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84A1C60F28048C3900917E04 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61D2804906900917E04 /* CarList */,
+				84A1C61E2804907800917E04 /* CarMap */,
+				84A1C61028048C4100917E04 /* Root */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		84A1C61028048C4100917E04 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61A28048FFE00917E04 /* Routing */,
+				84A1C61128048C4E00917E04 /* ViewModels */,
+				84A1C61228048C5400917E04 /* Views */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		84A1C61128048C4E00917E04 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84A1C61228048C5400917E04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61328048D2100917E04 /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84A1C61528048DA000917E04 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61628048DAB00917E04 /* Routing.swift */,
+				84A1C61828048DFB00917E04 /* RoutableView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		84A1C61A28048FFE00917E04 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61B2804900A00917E04 /* RootRoute.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		84A1C61D2804906900917E04 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C61F2804908900917E04 /* Views */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		84A1C61E2804907800917E04 /* CarMap */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C6202804908D00917E04 /* Views */,
+			);
+			path = CarMap;
+			sourceTree = "<group>";
+		};
+		84A1C61F2804908900917E04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C6212804909F00917E04 /* CarListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84A1C6202804908D00917E04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C623280490B400917E04 /* CarMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84A1C6252804980E00917E04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C62828049B3700917E04 /* Strings */,
+				84A1C6262804982800917E04 /* SFSymbols.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84A1C62828049B3700917E04 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C6342804B10100917E04 /* en.lproj */,
+				84A1C62B28049E1800917E04 /* Localizable.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		84A1C62D28049E6000917E04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C62E28049E6700917E04 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84A1C62E28049E6700917E04 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C62F28049E7400917E04 /* String.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		84A1C6342804B10100917E04 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				84A1C63B2804B2BB00917E04 /* Localizable.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A1C5EC2804899D00917E04 /* Preview Assets.xcassets in Resources */,
+				84A1C63D2804B2BB00917E04 /* Localizable.strings in Resources */,
 				84A1C5E92804899D00917E04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +413,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A1C5E72804899B00917E04 /* ContentView.swift in Sources */,
 				84A1C5E52804899B00917E04 /* SIXT_testApp.swift in Sources */,
+				84A1C61428048D2100917E04 /* RootView.swift in Sources */,
+				84A1C63028049E7400917E04 /* String.swift in Sources */,
+				84A1C624280490B400917E04 /* CarMapView.swift in Sources */,
+				84A1C61C2804900A00917E04 /* RootRoute.swift in Sources */,
+				84A1C6272804982800917E04 /* SFSymbols.swift in Sources */,
+				84A1C61928048DFB00917E04 /* RoutableView.swift in Sources */,
+				84A1C61728048DAB00917E04 /* Routing.swift in Sources */,
+				84A1C62C28049E1800917E04 /* Localizable.swift in Sources */,
+				84A1C6222804909F00917E04 /* CarListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +457,17 @@
 			targetProxy = 84A1C5FC2804899E00917E04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84A1C63B2804B2BB00917E04 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A1C63C2804B2BB00917E04 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		84A1C6032804899E00917E04 /* Debug */ = {
