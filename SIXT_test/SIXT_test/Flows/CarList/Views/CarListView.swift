@@ -17,10 +17,13 @@ struct CarListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.cars, id: \.id) { car in
-                Text("\(car.modelName) \(car.licensePlate)")
+            ForEach(viewModel.cars) { presentation in
+                CarListItem(presentation: presentation)
             }
+            .listRowSeparator(.hidden)
         }
+        .listStyle(.plain)
+        .background(Color(ColorAsset.background))
     }
 }
 

@@ -13,7 +13,7 @@ final class CarListViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    @Published var cars = [Car]()
+    @Published var cars = [CarListPresentation]()
     private let dataStorage: CarDataStorage
     
     private var anyCancellables = Set<AnyCancellable>()
@@ -29,7 +29,7 @@ final class CarListViewModel: ObservableObject {
     
     private func setBindings() {
         dataStorage.$cars
-            .assign(to: \.cars, on: self)
+            .sink { self.cars = $0.map({ CarListPresentation(model: $0) }) }
             .store(in: &anyCancellables)
     }
 }

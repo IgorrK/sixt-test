@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 public struct Car: Decodable {
+    
     // MARK: - Properties
     
     public let id: String

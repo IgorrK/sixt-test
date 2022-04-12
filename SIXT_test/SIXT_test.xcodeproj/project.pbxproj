@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		842119FF2804B56300AAD58C /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 842119FE2804B56300AAD58C /* Model */; };
 		84956A4B28058841005EF599 /* CarMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4A28058841005EF599 /* CarMapViewModel.swift */; };
+		84956A4E28059054005EF599 /* CarListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4D28059054005EF599 /* CarListPresentation.swift */; };
+		84956A502805A007005EF599 /* CarListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4F2805A007005EF599 /* CarListItem.swift */; };
 		84A1C5E52804899B00917E04 /* SIXT_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1C5E42804899B00917E04 /* SIXT_testApp.swift */; };
 		84A1C5E92804899D00917E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5E82804899D00917E04 /* Assets.xcassets */; };
 		84A1C5EC2804899D00917E04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1C5EB2804899D00917E04 /* Preview Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		84AC5DC8280571E7009D5B22 /* CarDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC5DC7280571E7009D5B22 /* CarDataStorage.swift */; };
 		84AC5DCA28057FBA009D5B22 /* RootNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC5DC928057FBA009D5B22 /* RootNetworking.swift */; };
 		84AC5DCD280580F1009D5B22 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC5DCC280580F1009D5B22 /* CarListViewModel.swift */; };
+		84BA8ABB280612720006634D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BA8ABA280612720006634D /* Colors.xcassets */; };
+		84BA8ABD2806166B0006634D /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8ABC2806166B0006634D /* ColorAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 /* Begin PBXFileReference section */
 		842119FC2804B4DC00AAD58C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Model; sourceTree = "<group>"; };
 		84956A4A28058841005EF599 /* CarMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewModel.swift; sourceTree = "<group>"; };
+		84956A4D28059054005EF599 /* CarListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresentation.swift; sourceTree = "<group>"; };
+		84956A4F2805A007005EF599 /* CarListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListItem.swift; sourceTree = "<group>"; };
 		84A1C5E12804899B00917E04 /* SIXT_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIXT_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1C5E42804899B00917E04 /* SIXT_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXT_testApp.swift; sourceTree = "<group>"; };
 		84A1C5E82804899D00917E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,8 @@
 		84AC5DC7280571E7009D5B22 /* CarDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataStorage.swift; sourceTree = "<group>"; };
 		84AC5DC928057FBA009D5B22 /* RootNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNetworking.swift; sourceTree = "<group>"; };
 		84AC5DCC280580F1009D5B22 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		84BA8ABA280612720006634D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		84BA8ABC2806166B0006634D /* ColorAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		84956A4C28059040005EF599 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84956A4D28059054005EF599 /* CarListPresentation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		84A1C5D82804899B00917E04 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 				84A1C6252804980E00917E04 /* Resources */,
 				84AC5DB228055790009D5B22 /* Services */,
 				84A1C5E82804899D00917E04 /* Assets.xcassets */,
+				84BA8ABA280612720006634D /* Colors.xcassets */,
 			);
 			path = SIXT_test;
 			sourceTree = "<group>";
@@ -261,6 +278,7 @@
 		84A1C61D2804906900917E04 /* CarList */ = {
 			isa = PBXGroup;
 			children = (
+				84956A4C28059040005EF599 /* Models */,
 				84AC5DCB280580D7009D5B22 /* ViewModels */,
 				84A1C61F2804908900917E04 /* Views */,
 			);
@@ -280,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				84A1C6212804909F00917E04 /* CarListView.swift */,
+				84956A4F2805A007005EF599 /* CarListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +316,7 @@
 			children = (
 				84A1C62828049B3700917E04 /* Strings */,
 				84A1C6262804982800917E04 /* SFSymbols.swift */,
+				84BA8ABC2806166B0006634D /* ColorAsset.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -494,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A1C5EC2804899D00917E04 /* Preview Assets.xcassets in Resources */,
+				84BA8ABB280612720006634D /* Colors.xcassets in Resources */,
 				84A1C63D2804B2BB00917E04 /* Localizable.strings in Resources */,
 				84A1C5E92804899D00917E04 /* Assets.xcassets in Resources */,
 			);
@@ -533,6 +554,8 @@
 				84A1C61928048DFB00917E04 /* RoutableView.swift in Sources */,
 				84A1C61728048DAB00917E04 /* Routing.swift in Sources */,
 				84AC5DCA28057FBA009D5B22 /* RootNetworking.swift in Sources */,
+				84BA8ABD2806166B0006634D /* ColorAsset.swift in Sources */,
+				84956A4E28059054005EF599 /* CarListPresentation.swift in Sources */,
 				84AC5DC8280571E7009D5B22 /* CarDataStorage.swift in Sources */,
 				84A1C62C28049E1800917E04 /* Localizable.swift in Sources */,
 				84AC5DCD280580F1009D5B22 /* CarListViewModel.swift in Sources */,
@@ -540,6 +563,7 @@
 				84AC5DBC2805595E009D5B22 /* MockNetworkServiceProvider.swift in Sources */,
 				84AC5DB828055870009D5B22 /* NetworkService.swift in Sources */,
 				84AC5DBA2805587C009D5B22 /* NetworkServiceProvider.swift in Sources */,
+				84956A502805A007005EF599 /* CarListItem.swift in Sources */,
 				84AC5DC028055AE7009D5B22 /* RootViewModel.swift in Sources */,
 				84A1C6222804909F00917E04 /* CarListView.swift in Sources */,
 			);

@@ -31,6 +31,11 @@ struct RootView: RoutableView {
             /// between two tabs and injected inside `RootRouter`
             await viewModel.loadData()
         }
+        .accentColor(Color(ColorAsset.sixtOrange))
+        .onAppear {
+            UITabBar.appearance().backgroundColor = ColorAsset.tabBarBackground
+            UITabBar.appearance().unselectedItemTintColor = .secondaryLabel
+        }
     }
 }
 
