@@ -14,4 +14,11 @@ public extension Car {
                                                                storageType: .bundle(.module))
         return try! modelDescriptor.parse()
     }
+    
+    static var mockModelList: [Car] {
+        let modelDescriptor = DecodableResourceDescriptor<[Car]>(name: "CarListMock",
+                                                               fileType: .json,
+                                                               storageType: .bundle(.module))
+        return try! modelDescriptor.parse()
+    }
 }

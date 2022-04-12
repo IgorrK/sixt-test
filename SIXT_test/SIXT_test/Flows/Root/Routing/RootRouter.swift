@@ -14,15 +14,19 @@ enum RootRoute: Int, RouteType, CaseIterable {
 }
 
 struct RootRouter: Routing {
+    
+    // MARK: - Properties
+    
+    let dataStorage: CarDataStorage
 
     // MARK: - Routing
     
     func view(for route: RootRoute) -> some View {
         switch route {
         case .list:
-            CarListView()
+            CarListView.instance(with: dataStorage)
         case .map:
-            CarMapView()
+            CarMapView.instance(with: dataStorage)
         }
     }
 }

@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CarMapView: View {
+    
+    // MARK: - Properties
+    
+    @ObservedObject var viewModel: CarMapViewModel
+    
+    // MARK: - View
+    
     var body: some View {
         Text("Map")
     }
@@ -15,6 +22,13 @@ struct CarMapView: View {
 
 struct CarMapView_Previews: PreviewProvider {
     static var previews: some View {
-        CarMapView()
+        CarMapView(viewModel: CarMapViewModel(dataStorage: CarDataStorage(networkService: MockServices().network)))
+    }
+}
+
+// MARK: - Factory methods
+extension CarMapView {
+    static func instance(with dataStorage: CarDataStorage) -> CarMapView {
+        return CarMapView(viewModel: CarMapViewModel(dataStorage: dataStorage))
     }
 }

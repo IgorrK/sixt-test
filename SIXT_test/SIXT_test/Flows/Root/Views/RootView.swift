@@ -9,8 +9,14 @@ import SwiftUI
 import Model
 
 struct RootView: RoutableView {
+    
+    // MARK: - Properties
+    
+    var viewModel: RootViewModel
     var router: RootRouter
 
+    // MARK: - View
+    
     var body: some View {
         
         TabView {
@@ -20,19 +26,29 @@ struct RootView: RoutableView {
                     .tabItemStyle(route: route)
             }
         }
+        .task {
+            /// Decided to load data into shared storage here, since  the data is common
+            /// between two tabs and injected inside `RootRouter`
+            await viewModel.loadData()
+        }
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(router: RootRouter())
+        let services = MockServices()
+        let dataStorage = CarDataStorage(networkService: services.network)
+        RootView(viewModel: RootViewModel(services: services, dataStorage: dataStorage),
+                 router: RootRouter(dataStorage: dataStorage))
     }
 }
 
 // MARK: - Factory methods
 extension RootView {
-    static func instance() -> RootView {
-        return RootView(router: RootRouter())
+    static func instance(with services: Services) -> RootView {
+        let dataStorage = CarDataStorage(networkService: services.network)
+        return RootView(viewModel: RootViewModel(services: services, dataStorage: dataStorage),
+                 router: RootRouter(dataStorage: dataStorage))
     }
 }
 

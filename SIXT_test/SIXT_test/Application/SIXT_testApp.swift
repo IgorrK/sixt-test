@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SIXT_testApp: App {
+
+    private let services: Services = AppServices(networkServiceProvider: MockNetworkServiceProvider())
+    
     var body: some Scene {
         WindowGroup {
-            RootView.instance()
+            RootView.instance(with: services)
         }
     }
 }
