@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CarMapView: View {
     
@@ -16,7 +17,24 @@ struct CarMapView: View {
     // MARK: - View
     
     var body: some View {
-        Text("Map")
+        Map(coordinateRegion: $viewModel.coordinateRegion,
+            annotationItems: viewModel.annotations) { annotationVM in
+            MapAnnotation(coordinate: annotationVM.coordinate,
+                          anchorPoint: CGPoint(x: 0.5, y: 1.0),
+                          content: {
+                CarAnnotation(viewModel: annotationVM)
+                
+                    .onTapGesture {
+                        withAnimation {
+                            viewModel.handleInput(event: .annotationSelection(annotationVM))
+                        }
+                    }
+            })
+        }
+            .ignoresSafeArea()
+            .onAppear {
+                viewModel.handleInput(event: .onAppear)
+            }
     }
 }
 

@@ -15,4 +15,8 @@ struct SFSymbols {
     struct Map {
         static var `default` = "map"
     }
+    
+    struct Car {
+        static var fill = "car.fill"
+    }
 }

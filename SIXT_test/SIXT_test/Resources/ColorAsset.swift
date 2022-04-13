@@ -16,5 +16,5 @@ struct ColorAsset {
     static var background: UIColor { UIColor(named: "background")! }
     static var tabBarBackground: UIColor { UIColor(named: "tabBarBackground")! }
     static var sixtOrange: UIColor { UIColor(named: "sixtOrange")! }
-
+    static var mapAnnotationFill: UIColor { UIColor(named: "mapAnnotationFill")! }
 }

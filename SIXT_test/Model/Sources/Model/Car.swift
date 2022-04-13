@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-public struct Car: Decodable {
+public struct Car: Decodable, Identifiable {
     
     // MARK: - Properties
     
