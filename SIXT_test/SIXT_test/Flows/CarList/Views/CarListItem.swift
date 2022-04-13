@@ -18,38 +18,36 @@ struct CarListItem: View {
     
     var body: some View {
         VStack(spacing: 0.0) {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 8.0) {
-                Text("\(presentation.make) \(presentation.modelName)")
-                Text("\(presentation.licensePlate)")
-                    .padding(4.0)
-                    .foregroundColor(.black)
-                    .font(.system(size: 14.0, weight: .bold, design: .monospaced))
-                    .background(Color.white)
-                    .cornerRadius(4.0)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 4.0)
-                            .stroke(Color.black, lineWidth: 2.0)
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 8.0) {
+                    Text("\(presentation.make) \(presentation.modelName)")
+                    Text("\(presentation.licensePlate)")
+                        .padding(4.0)
+                        .foregroundColor(.black)
+                        .font(.system(size: 14.0, weight: .bold, design: .monospaced))
+                        .background(Color.white)
+                        .cornerRadius(4.0)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 4.0)
+                                .stroke(Color.black, lineWidth: 2.0)
                         )
                     
+                }
+                .padding(.top, 12.0)
+                Spacer()
+                
+                WebImage(url: presentation.carImageUrl,
+                         placeholder: {
+                    Image(uiImage: #imageLiteral(resourceName: "carPlaceholder"))
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                })
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 128.0, height: 128.0)
+                .padding(.trailing, 16.0)
             }
-            .padding(.top, 12.0)
-            Spacer()
-            AsyncImage(url: presentation.carImageUrl, content: { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    
-            }, placeholder: {
-                Image(uiImage: #imageLiteral(resourceName: "carPlaceholder"))
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            })
-            .frame(width: 128.0, height: 128.0)
-            .padding(.trailing, 16.0)
-        }
-        .padding(.horizontal, 16.0)
-         
+            .padding(.horizontal, 16.0)
+            
             Color.secondary
                 .opacity(0.5)
                 .frame(height: 1.0)
