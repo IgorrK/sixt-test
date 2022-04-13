@@ -9,11 +9,13 @@ import Foundation
 import Model
 import Combine
 
-final class CarListViewModel: ObservableObject {
+final class CarListViewModel: ObservableObject, InteractiveViewModel {
     
     // MARK: - Properties
     
     @Published var cars = [CarListPresentation]()
+    @Published var error: Error?
+
     private let dataStorage: CarDataStorage
     
     private var anyCancellables = Set<AnyCancellable>()
@@ -31,5 +33,31 @@ final class CarListViewModel: ObservableObject {
         dataStorage.$cars
             .sink { self.cars = $0.map({ CarListPresentation(model: $0) }) }
             .store(in: &anyCancellables)
+    }
+    
+    @MainActor
+    private func refreshData() async {
+        do {
+            try await dataStorage.loadData()
+        } catch {
+            self.error = error
+        }
+    }
+    
+    // MARK: - InteractiveViewModel
+    
+    func handleInput(event: Event) async {
+        switch event {
+        case .onRefresh:
+            await refreshData()
+//            try? await dataStorage.loadData()
+        }
+    }
+}
+
+// MARK: - Nested types
+extension CarListViewModel {
+    enum Event {
+        case onRefresh
     }
 }

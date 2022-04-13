@@ -25,6 +25,7 @@ final class CarDataStorage: NSObject, ObservableObject {
     
     // MARK: - Public methods
     
+    @MainActor
     func loadData() async throws {
         cars = try await networkService.getCarsList()
     }

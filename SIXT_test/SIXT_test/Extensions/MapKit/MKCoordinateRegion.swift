@@ -16,8 +16,8 @@ extension MKCoordinateRegion {
     ///
     /// - Parameters:
     ///   - coordinates: Coordinates to be displayed in region.
-    init(coordinates: [CLLocationCoordinate2D]) {
-        
+    init?(coordinates: [CLLocationCoordinate2D]) {
+        guard !coordinates.isEmpty else { return nil }
         var minLatitude: CLLocationDegrees = 90.0
         var maxLatitude: CLLocationDegrees = -90.0
         var minLongitude: CLLocationDegrees = 180.0
@@ -40,5 +40,11 @@ extension MKCoordinateRegion {
         let center = CLLocationCoordinate2DMake(maxLatitude - span.latitudeDelta / spanMultiplier / 2.0,
                                                 maxLongitude - span.longitudeDelta / spanMultiplier / 2.0)
         self.init(center: center, span: span)
+    }
+    
+    static var `default`: MKCoordinateRegion {
+        return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
+                                  span:  MKCoordinateSpan(latitudeDelta: 180.0, longitudeDelta: 180.0))
+        
     }
 }

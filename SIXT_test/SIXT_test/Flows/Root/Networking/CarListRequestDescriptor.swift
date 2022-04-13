@@ -11,7 +11,7 @@ import Model
 struct CarListRequestDescriptor: NetworkRequestDescriptor {
     typealias ResponseType = [Car]
     
-    var path: String { "codingtask/cars" }
+    var path: String { "/codingtask/cars" }
     
     var mockResponse: [Car] { Car.mockModelList }
 }

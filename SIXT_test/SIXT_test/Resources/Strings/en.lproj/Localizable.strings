@@ -6,5 +6,11 @@
   
 */
 
+"application.ok" = "Ok";
+
 "root.tab.list" = "List";
 "root.tab.map" = "View on Map";
+
+"networkError.description" = "Network error";
+"networkError.failureReason" = "It's not your fault, but a server error";
+"networkError.recoverySuggestion" = "Please try again later";

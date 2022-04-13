@@ -35,7 +35,7 @@ final class CarMapViewModel: ObservableObject, InteractiveViewModel {
         dataStorage.$cars
             .sink { cars in
                 self.annotations = cars.map({ CarAnnotationViewModel(model: $0) })
-                self.coordinateRegion = MKCoordinateRegion(coordinates: cars.map({ $0.coordinate }))
+                self.coordinateRegion = MKCoordinateRegion(coordinates: cars.map({ $0.coordinate })) ?? .default
             }
             .store(in: &anyCancellables)
     }

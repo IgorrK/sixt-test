@@ -12,7 +12,7 @@ struct RootView: RoutableView {
     
     // MARK: - Properties
     
-    var viewModel: RootViewModel
+    @StateObject var viewModel: RootViewModel
     var router: RootRouter
 
     // MARK: - View
@@ -31,6 +31,7 @@ struct RootView: RoutableView {
             /// between two tabs and injected inside `RootRouter`
             await viewModel.loadData()
         }
+        .alert(error: $viewModel.error)
         .accentColor(Color(ColorAsset.sixtOrange))
         .onAppear {
             UITabBar.appearance().backgroundColor = ColorAsset.tabBarBackground

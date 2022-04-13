@@ -7,13 +7,15 @@
 
 import Foundation
 
-final class RootViewModel {
+final class RootViewModel: ObservableObject {
             
     // MARK: - Properties
     
     private let dataStorage: CarDataStorage
     private let services: Services
     
+    @Published var error: Error?
+
     // MARK: - Lifecycle
     
     init(services: Services, dataStorage: CarDataStorage) {
@@ -25,7 +27,11 @@ final class RootViewModel {
     
     @MainActor
     func loadData() async {
-        try? await dataStorage.loadData()
+        do {
+            try await dataStorage.loadData()
+        } catch {
+            self.error = error
+        }
     }
 }
 

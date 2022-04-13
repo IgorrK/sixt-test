@@ -11,7 +11,7 @@ struct CarListView: View {
     
     // MARK: - Properties
     
-    @ObservedObject var viewModel: CarListViewModel
+    @StateObject var viewModel: CarListViewModel
     
     // MARK: - View
     
@@ -22,8 +22,12 @@ struct CarListView: View {
             }
             .listRowSeparator(.hidden)
         }
+        .alert(error: $viewModel.error)
         .listStyle(.plain)
         .background(Color(ColorAsset.background))
+        .refreshable {
+            await viewModel.handleInput(event: .onRefresh)
+        }
     }
 }
 

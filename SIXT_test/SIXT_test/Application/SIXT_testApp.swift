@@ -9,8 +9,19 @@ import SwiftUI
 
 @main
 struct SIXT_testApp: App {
-
-    private let services: Services = AppServices(networkServiceProvider: MockNetworkServiceProvider())
+    // MARK: - Properties
+    private let services: Services = {
+        let networkServiceProvider: NetworkServiceProvider
+        if let provider = URLSessionNetworkServiceProvider(bundle: .main) {
+            networkServiceProvider = provider
+        } else {
+            //TODO: Log some error, probably
+            networkServiceProvider = MockNetworkServiceProvider()
+        }
+        return AppServices(networkServiceProvider: networkServiceProvider)
+    }()
+    
+    // MARK: - App
     
     var body: some Scene {
         WindowGroup {

@@ -12,7 +12,7 @@ struct CarMapView: View {
     
     // MARK: - Properties
     
-    @ObservedObject var viewModel: CarMapViewModel
+    @StateObject var viewModel: CarMapViewModel
     
     // MARK: - View
     

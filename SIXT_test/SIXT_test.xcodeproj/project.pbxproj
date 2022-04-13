@@ -45,6 +45,8 @@
 		84BA8ACC2806ECF80006634D /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8ACB2806ECF80006634D /* MKCoordinateRegion.swift */; };
 		84BA8ACE2806F5F90006634D /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8ACD2806F5F90006634D /* CarAnnotation.swift */; };
 		84BA8AD02807003A0006634D /* CarAnnotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8ACF2807003A0006634D /* CarAnnotationViewModel.swift */; };
+		84BA8AD2280740770006634D /* URLSessionNetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8AD1280740770006634D /* URLSessionNetworkServiceProvider.swift */; };
+		84BA8AD628074A510006634D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA8AD528074A510006634D /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,9 @@
 		84BA8ACB2806ECF80006634D /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		84BA8ACD2806F5F90006634D /* CarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
 		84BA8ACF2807003A0006634D /* CarAnnotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotationViewModel.swift; sourceTree = "<group>"; };
+		84BA8AD1280740770006634D /* URLSessionNetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkServiceProvider.swift; sourceTree = "<group>"; };
+		84BA8AD3280741420006634D /* SIXT-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SIXT-test-Info.plist"; sourceTree = SOURCE_ROOT; };
+		84BA8AD528074A510006634D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +189,7 @@
 		84A1C5E32804899B00917E04 /* SIXT_test */ = {
 			isa = PBXGroup;
 			children = (
+				84BA8AD3280741420006634D /* SIXT-test-Info.plist */,
 				84A1C60E28048A7C00917E04 /* Application */,
 				84A1C61528048DA000917E04 /* Base */,
 				84A1C62D28049E6000917E04 /* Extensions */,
@@ -346,6 +352,7 @@
 		84A1C62D28049E6000917E04 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84BA8AD428074A450006634D /* SwiftUI */,
 				84BA8ACA2806ECEA0006634D /* MapKit */,
 				84A1C62E28049E6700917E04 /* Foundation */,
 			);
@@ -382,6 +389,7 @@
 				84AC5DB62805585B009D5B22 /* Protocols */,
 				84AC5DB728055870009D5B22 /* NetworkService.swift */,
 				84AC5DBB2805595E009D5B22 /* MockNetworkServiceProvider.swift */,
+				84BA8AD1280740770006634D /* URLSessionNetworkServiceProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -442,6 +450,14 @@
 				84BA8ACB2806ECF80006634D /* MKCoordinateRegion.swift */,
 			);
 			path = MapKit;
+			sourceTree = "<group>";
+		};
+		84BA8AD428074A450006634D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				84BA8AD528074A510006634D /* View.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,6 +617,7 @@
 				84AC5DCA28057FBA009D5B22 /* RootNetworking.swift in Sources */,
 				84BA8ACE2806F5F90006634D /* CarAnnotation.swift in Sources */,
 				84BA8ABD2806166B0006634D /* ColorAsset.swift in Sources */,
+				84BA8AD2280740770006634D /* URLSessionNetworkServiceProvider.swift in Sources */,
 				84956A4E28059054005EF599 /* CarListPresentation.swift in Sources */,
 				84AC5DC8280571E7009D5B22 /* CarDataStorage.swift in Sources */,
 				84A1C62C28049E1800917E04 /* Localizable.swift in Sources */,
@@ -609,6 +626,7 @@
 				84AC5DBC2805595E009D5B22 /* MockNetworkServiceProvider.swift in Sources */,
 				84AC5DB828055870009D5B22 /* NetworkService.swift in Sources */,
 				84AC5DBA2805587C009D5B22 /* NetworkServiceProvider.swift in Sources */,
+				84BA8AD628074A510006634D /* View.swift in Sources */,
 				84956A502805A007005EF599 /* CarListItem.swift in Sources */,
 				84AC5DC028055AE7009D5B22 /* RootViewModel.swift in Sources */,
 				84A1C6222804909F00917E04 /* CarListView.swift in Sources */,
@@ -784,6 +802,7 @@
 				DEVELOPMENT_TEAM = G68HFXQ7G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIXT-test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -813,6 +832,7 @@
 				DEVELOPMENT_TEAM = G68HFXQ7G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIXT-test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

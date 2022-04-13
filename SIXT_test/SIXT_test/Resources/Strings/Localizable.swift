@@ -12,6 +12,10 @@ import Foundation
 /// the number of localizable strings is not so large.
 internal struct Localizable {
     
+    struct Application {
+        static var ok: String { "Ok" }
+    }
+    
     struct Root {
         
         struct Tab {
@@ -19,5 +23,11 @@ internal struct Localizable {
             static var map: String { "root.tab.map".localized }
         }
         
+    }
+    
+    struct NetworkError {
+        static var description: String { "networkError.description".localized }
+        static var failureReason: String { "networkError.failureReason".localized }
+        static var recoverySuggestion: String { "networkError.recoverySuggestion".localized }
     }
 }
