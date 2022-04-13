@@ -15,7 +15,7 @@ struct SIXT_testApp: App {
         if let provider = URLSessionNetworkServiceProvider(bundle: .main) {
             networkServiceProvider = provider
         } else {
-            //TODO: Log some error, probably
+            //Covered in tests
             networkServiceProvider = MockNetworkServiceProvider()
         }
         return AppServices(networkServiceProvider: networkServiceProvider)

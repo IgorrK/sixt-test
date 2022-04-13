@@ -33,7 +33,12 @@ final class URLSessionNetworkServiceProvider: NetworkServiceProvider {
             throw NetworkError.invalidResponse
         }
 
-        return try decoder.decode(Descriptor.ResponseType.self, from: data)
+        do {
+            return try decoder.decode(Descriptor.ResponseType.self, from: data)
+        } catch {
+            throw NetworkError.decodingError
+        }
+        
     }
 }
 
@@ -42,6 +47,7 @@ extension URLSessionNetworkServiceProvider {
     enum NetworkError: LocalizedError {
         case wrongURL
         case invalidResponse
+        case decodingError
         
         // MARK: - LocalizedError
         

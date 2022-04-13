@@ -50,7 +50,6 @@ final class CarListViewModel: ObservableObject, InteractiveViewModel {
         switch event {
         case .onRefresh:
             await refreshData()
-//            try? await dataStorage.loadData()
         }
     }
 }

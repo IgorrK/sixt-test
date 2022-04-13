@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		842119FF2804B56300AAD58C /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 842119FE2804B56300AAD58C /* Model */; };
+		848613F0280766E700A0D6AC /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848613EF280766E700A0D6AC /* APITests.swift */; };
 		84956A4B28058841005EF599 /* CarMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4A28058841005EF599 /* CarMapViewModel.swift */; };
 		84956A4E28059054005EF599 /* CarListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4D28059054005EF599 /* CarListPresentation.swift */; };
 		84956A502805A007005EF599 /* CarListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84956A4F2805A007005EF599 /* CarListItem.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		842119FC2804B4DC00AAD58C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Model; sourceTree = "<group>"; };
+		848613EF280766E700A0D6AC /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		84956A4A28058841005EF599 /* CarMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewModel.swift; sourceTree = "<group>"; };
 		84956A4D28059054005EF599 /* CarListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresentation.swift; sourceTree = "<group>"; };
 		84956A4F2805A007005EF599 /* CarListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListItem.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		84A1C5F42804899E00917E04 /* SIXT_testTests */ = {
 			isa = PBXGroup;
 			children = (
+				848613EF280766E700A0D6AC /* APITests.swift */,
 			);
 			path = SIXT_testTests;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848613F0280766E700A0D6AC /* APITests.swift in Sources */,
 				84A1C5F62804899E00917E04 /* SIXT_testTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ import Model
 final class CarDataStorage: NSObject, ObservableObject {
     
     // MARK: - Properties
+    
     private let networkService: RootNetworking
     
     @Published private(set) var cars = [Car]()
